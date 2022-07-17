@@ -7,10 +7,9 @@ print(alien_o['points'])
 
 # dictionaries are dynamic
 
-alien_o['x_position'] = 0
-alien_o['y_position'] = 25
+alien_o = {'x_position': 0, 'y_position': 25, "speed": "medium"}
 #adds x,y position key pairs to alien_o
-print(alien_o)
+print(f"Original Position: {alien_o['x_position']}")
 
 alien_o['speed'] = 'medium'
 if alien_o['speed'] == 'slow':
@@ -27,11 +26,11 @@ print(f"New position: {alien_o['x_position']}!")
 
 #Removing key values
 #Given alien_o then we can do delete
-
+alien_o = {'color': 'green', 'points': 5}
 del alien_o['points']
 print(alien_o)
 
-# Dictionary with similar objects
+# Dictionary with similar objects - pg 97
 
 favorite_languages = {
     'jen': 'python',
@@ -42,7 +41,7 @@ favorite_languages = {
 
 print(f"Sarah's favorite language is: {favorite_languages['sarah']}!")
 
-#Using get() to access values
+#Using get() to access values pg 98
 
-points = alien_o.get('points')
+points = alien_o.get('color')
 print(points) #returns none because points no longer exist
